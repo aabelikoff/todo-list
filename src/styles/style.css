@@ -1,0 +1,358 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+   
+}
+
+img {
+    width: 23px;
+    height: 23px;
+}
+
+
+.logo img{
+    width: 200px;
+    height: 66px;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid gray;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:stretch;
+    justify-content: flex-start;
+}
+
+.panel{
+    background-color: rgb(223, 238, 233);
+    flex-shrink: 0;
+    width:220px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: 2px solid gray;
+}
+
+.panel>ul{
+    list-style: none;
+    padding-left: 15px;
+}
+
+.panel>ul li{
+    margin-bottom: 25px;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width:100%;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#projects>ul {
+    list-style-type:disc;
+    width: 100%;
+    /*display: none;*/
+}
+
+#projects>ul li{
+    margin: 0;
+    width: 100%;
+    display: flex;
+}
+
+
+
+#projects>ul li img {
+    width: 15px;
+    height: 15px;
+}
+
+ul#projList{
+    margin-bottom: 5px;
+}
+
+ul#projList li{
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#projList li div{
+    height: 100%;
+}
+
+#projList li div.round{
+    width: 15px;
+    height: 15px;
+    padding:0;
+}
+
+#projList li div.round a{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#curDate {
+    padding: 2px;
+    border-radius: 10px;
+    border: 4px solid rgb(69, 160, 110);
+    /*background-color: rgba(189, 238, 167, 0.8);*/
+    /*color: bisque;*/
+}
+
+#curDay{
+    position: relative;
+    z-index: 0;
+    right: 161px;
+    top: 4px;
+}
+
+.projPopup, .taskPopup{
+    padding: 5px;
+    background-color: rgb(189, 181, 181);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 370px;
+    left: 480px;
+    width: 400px;
+    height: 100px;
+    display: none;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.taskPopup{
+    width: 450px;
+    height: 300px;
+    bottom: 200px;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.taskPopup h2{
+    padding: 2px;
+    margin: 0 0 10px 0;
+}
+
+#taskForm{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#taskForm div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+#taskForm div label{
+    width: 80px;
+}
+
+#taskForm :last-child{
+    justify-content: center;
+}
+
+input#title:invalid, input#dueDate:invalid{
+    border: 2ps dotted red;
+}
+
+input#title:invalid:required,  input#dueDate:invalid:required, input#name:required{
+    border: 2px solid red;
+}
+
+input#title:valid,  input#dueDate:valid, input#name:valid{
+    border: 2px solid green;
+}
+
+button {
+    margin: 5px;
+}
+
+.projPopup p{
+    margin: 0px;
+}
+
+.projPopup input {
+    height: 30px;
+    padding: 1px;
+    font-size: x-large;
+}
+
+.projPopup div {
+    width:100%;
+   text-align: center;
+}
+
+.projPopup button{
+    
+    border: 1px solid green;
+    border-radius: 3px;
+}
+
+.tasks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /*background-color:rgb(221, 235, 183);*/
+}
+
+#addtask{
+    background-color: rgba(189, 238, 167, 0.5);
+    background-image: url('../icons/icons8-plus-+-48.png');
+    margin-right: 30px;
+
+    /*position: fixed;*/
+}
+
+.round {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border-radius: 50%;
+    top: 15px;
+    right: 30px;
+}
+
+.task .round {
+    width:28px;
+    height: 28px;
+}
+
+.round a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.task {
+    width: 95%;
+    height: 30px;
+    border: 1px solid green;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.task div a{
+    text-align: center;
+}
+
+.task div a:hover{
+    background-color: rgba(189, 184, 184, 0.6);
+}
+
+input[type="checkbox"]:checked{
+    background-color: grey;
+}
+
+.error {
+    width  : 100px;
+    padding: 0;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
+
+#selectProject, #selectPriority{
+    width: 150px;
+}
+
+.high {
+    background-color: rgb(194, 88, 88);
+}
+
+.normal{
+    background-color: rgb(107, 226, 186);
+}
+
+.low {
+    background-color: rgb(238, 194, 139);
+}
+
+.completed {
+    background-color: rgb(146, 146, 139);
+    color:rgba(189, 184, 184, 0.6);
+    text-decoration:line-through;
+}
+
+.rotated {
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+   
+    
+}
+
+.antirotated {
+    transform: rotate(-360deg);
+    transition: transform 0.5s;
+}
+
+.larger {
+    transform: scale(1.3);
+    transition: transform 0.5s;
+}
+
+.smaller {
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+div.larger {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+.smaller {
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+
