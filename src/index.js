@@ -7,7 +7,6 @@ import dataController from './dataController';
 import forms from './forms';
 import uiController from './uiController';
 
-
 function storageAvailable(type) {
 	try {
 		var storage = window[type],
